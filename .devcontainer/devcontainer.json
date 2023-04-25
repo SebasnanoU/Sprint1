@@ -1,0 +1,5 @@
+{
+    "name": "dev Sprint 1",
+    "dockerFile": "Dockerfile",
+    "appPort": 8001
+}
