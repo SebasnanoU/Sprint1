@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import products,  update_archivo
 
-# Register your models here.
+
+class UpdateArchivoAdmin(admin.ModelAdmin):
+    list_display = ["archivo"]
+    list_filter = ["archivo"]
+
+admin.site.register(products)
+admin.site.register(update_archivo, UpdateArchivoAdmin)
