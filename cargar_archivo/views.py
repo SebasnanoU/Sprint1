@@ -8,7 +8,7 @@ def index(request):
         archivo_csv = request.FILES['archivo']
         decoded_file = archivo_csv.read().decode('latin-1')  # Utilizar 'latin-1' en lugar de 'utf-8'
         reader = csv.reader(decoded_file.splitlines(), delimiter=';')
-        next(reader)  # Saltar la primera línea si contiene encabezados
+        # next(reader)  # Saltar la primera línea si contiene encabezados
 
         for fila in reader:
             codigo_producto = int(fila[0])
